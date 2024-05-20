@@ -78,6 +78,19 @@ p{
     transition: 0.2s;
 }
 
+.btn.animate-btn {
+    animation: animate-outline 1s ease-out infinite;
+}
+
+@keyframes animate-outline {
+    from {
+        outline: 0px solid var(--Light-Red);
+    }
+    to {
+        outline: 15px solid #4f9bf900;
+    }
+}
+
 .btn:hover {
     background-color: var(--Torch-Red);
 }
@@ -122,13 +135,13 @@ p{
     }
 }
 
-
 /*css do header*/
 header{
     background: var(--black);
     filter: brightness(0.8);
     background-size: cover;
     background-attachment: fixed;
+    min-height: 100vh;
     width: 100%; 
     margin: 0 0 0 0 ; 
     padding: 0; 
@@ -155,3 +168,84 @@ nav ul a{
     display: block;
 }
 
+nav ul a:not(.btn)::after{
+    content: "";
+    background-color: var(--Torch-Red);
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+nav ul a:hover::after{
+    width: 100%;
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+}
+
+.banner .banner-text{
+    margin: 80px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1{
+    font-size: 96px;
+    font-weight: 800;
+    color: var(--white);
+}
+
+/*
+.banner .banner-text h1.animate-text {
+    animation: animate 4s linear infinite;
+    text-shadow: 0 0 0 var(--Light-Red);
+}
+
+@keyframes animate {
+    0% {
+        text-shadow: 0 0 0 #4f9bf900;
+    }
+    10% {
+        text-shadow: 0 0 10px var(--Light-Red);
+    }
+    20% {
+        text-shadow: 0 0 15px var(--Light-Red);
+    }
+    30% {
+        text-shadow: 0 0 20px var(--Light-Red);
+    }
+    40% {
+        text-shadow: 0 0 25px var(--Light-Red);
+    }
+    50% {
+        text-shadow: 0 0 30px var(--Light-Red);
+    }
+    60% {
+        text-shadow: 0 0 25px var(--Light-Red);
+    }
+    70% {
+        text-shadow: 0 0 20px var(--Light-Red);
+    }
+    80% {
+        text-shadow: 0 0 15px var(--Light-Red);
+    }
+    90% {
+        text-shadow: 0 0 10px var(--Light-Red);
+    }
+    100% {
+        text-shadow: 0 0 0 #4f9bf900;
+    }
+}
+
+*/
+
+.banner .banner-text p{
+    font-size: 20px;
+    color: white;
+    font-weight: lighter;
+    margin: 18px 0;
+}
