@@ -248,7 +248,9 @@ nav ul a:hover::after{
 
 /*css projetos.projetos*/
 .projetos {
-    margin: 150px 0 150px 0;
+    margin: 180px 0 180px 0;
+    padding: 100px;
+    width: 100%;
 }
 .projetos .container {
     display: flex;
@@ -294,5 +296,41 @@ nav ul a:hover::after{
     filter: blur(0);
     transform: translate(0, 0); /* Volta a imagem para a posição original */
   }
+
+footer{
+    background-color: var(--black);
+}
+footer .container{
+    display: flex;
+    color: white;
+}
+footer .container ul{
+    width: 25%;
+    list-style-type: none;
+    align-items: center;
+    text-align: center;
+}
+footer .container h3{
+    font-size: 30px;
+    margin-top: 16px;
+    font-weight: 600;
+}
+footer .container .redes-sociais img{
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+footer .container .redes-sociais img:hover{
+    transform: scale(1.1);
+}
+
+footer .container ul > p{
+    margin-bottom: 30px;
+}
+footer .container li{
+    margin: 10px 0;
+}
+footer .container a{
+    color: white;
+}
   
   
