@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*css global*/
 
@@ -8,7 +8,7 @@
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
-    font-family: "Raleway", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 /*cores do projeto*/
@@ -46,10 +46,6 @@ body{
     text-transform: uppercase;
     font-weight: 800;
     align-items: center;
-}
-
-section, footer{
-    padding: 54px 0;
 }
 
 h3{
@@ -250,30 +246,47 @@ nav ul a:hover::after{
     margin: 18px 0;
 }
 
-/*css casa*/
-.casa .container{
+/*css projetos.projetos*/
+.projetos .container {
     display: flex;
     align-items: center;
+    background-color: white;
+    min-height: 100vh;
 }
-.casa .casa-img{
+.projetos .projeto-img {
     width: 50%;
 }
-.casa .casa-img img{
+.projetos .projeto-img img {
     width: 100%;
     border-radius: 10px;
+    box-shadow: var(--Light-Red);
 }
-.casa .casa-text{
+.projetos .projeto-text {
     width: 50%;
     padding-left: 90px;
 }
-.casa .casa-text h2{
+.projetos .projeto-text h2 {
     font-size: 2.5em;
+    color: var(--black);
 }
-.casa .casa-text p{
+.projetos .projeto-text p {
     margin: 20px;
-    color: var(--color-p);
+    color: var(--black);
 }
-.casa .casa-text p b{
-    color: black;
+.projetos .projeto-text p b {
+    color: var(--black);
     font-size: 20px;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+    transition: all 2s;
 }

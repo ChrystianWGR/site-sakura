@@ -1,5 +1,3 @@
-
-
 // Função para criar uma partícula
 function createParticle() {
     const particle = document.createElement('div');
