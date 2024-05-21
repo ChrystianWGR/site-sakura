@@ -29,19 +29,19 @@ body{
 
 .logo {
     display: flex;
-    align-items: center; /* Alinha verticalmente ao centro */
+    align-items: center; 
 }
   
 .logo img {
-    width: auto; /* Mantém a proporção da imagem */
-    height: 50px; /* Ajuste a altura conforme necessário */
-    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+    width: auto; 
+    height: 50px; 
+    margin-right: 10px; 
 }
   
 .logo a {
-    text-decoration: none; /* Remove o sublinhado do link */
-    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
-    color: #fff; /* Cor do texto */
+    text-decoration: none; 
+    font-size: 24px;
+    color: #fff; 
     display: flex;
     text-transform: uppercase;
     font-weight: 800;
@@ -184,15 +184,22 @@ nav ul a:hover::after{
 }
 
 .banner .banner-text{
-    margin: 80px;
+    margin: 100px;
     text-align: center;
     padding: 0 90px;
 }
 
 .banner .banner-text h1{
-    font-size: 96px;
+    font-size: 90px;
     font-weight: 800;
     color: var(--white);
+}
+
+.banner .banner-text p{
+    font-size: 20px;
+    color: white;
+    font-weight: lighter;
+    margin: 18px 0;
 }
 
 /*
@@ -239,19 +246,14 @@ nav ul a:hover::after{
 
 */
 
-.banner .banner-text p{
-    font-size: 20px;
-    color: white;
-    font-weight: lighter;
-    margin: 18px 0;
-}
-
 /*css projetos.projetos*/
+.projetos {
+    margin: 150px 0 150px 0;
+}
 .projetos .container {
     display: flex;
     align-items: center;
     background-color: white;
-    min-height: 100vh;
 }
 .projetos .projeto-img {
     width: 50%;
@@ -259,7 +261,10 @@ nav ul a:hover::after{
 .projetos .projeto-img img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: var(--Light-Red);
+    transition: transform 0.3s ease;
+}
+.projetos .projeto-img img:hover{
+    transform: scale(1.1);
 }
 .projetos .projeto-text {
     width: 50%;
@@ -270,23 +275,24 @@ nav ul a:hover::after{
     color: var(--black);
 }
 .projetos .projeto-text p {
-    margin: 20px;
+    margin: 14px 20px 20px 0px;
     color: var(--black);
 }
 .projetos .projeto-text p b {
     color: var(--black);
     font-size: 20px;
 }
-.hidden{
-    opacity: 0;
+.hidden {
+    opacity: 0; /* Começa completamente invisível */
     filter: blur(15px);
-    transform: translateX(-100%);
-    transition: all 2s;
-}
-
-.show{
-    opacity: 1;
+    transform: translate(0, 20px); /* Ajuste a translação vertical conforme necessário */
+    transition: opacity 1s, filter 1s, transform 1s; /* Adiciona uma transição para opacity, filter e transform */
+  }
+  
+  .show {
+    opacity: 1; /* Torna a imagem completamente visível */
     filter: blur(0);
-    transform: translate(0);
-    transition: all 2s;
-}
+    transform: translate(0, 0); /* Volta a imagem para a posição original */
+  }
+  
+  
