@@ -29,19 +29,19 @@ body{
 
 .logo {
     display: flex;
-    align-items: center; 
+    align-items: center; /* Alinha verticalmente ao centro */
 }
   
 .logo img {
-    width: auto; 
-    height: 50px; 
-    margin-right: 10px; 
+    width: auto; /* Mantém a proporção da imagem */
+    height: 50px; /* Ajuste a altura conforme necessário */
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
 }
   
 .logo a {
-    text-decoration: none; 
-    font-size: 24px;
-    color: #fff; 
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+    color: #fff; /* Cor do texto */
     display: flex;
     text-transform: uppercase;
     font-weight: 800;
@@ -184,22 +184,15 @@ nav ul a:hover::after{
 }
 
 .banner .banner-text{
-    margin: 100px;
+    margin: 80px;
     text-align: center;
     padding: 0 90px;
 }
 
 .banner .banner-text h1{
-    font-size: 90px;
+    font-size: 96px;
     font-weight: 800;
     color: var(--white);
-}
-
-.banner .banner-text p{
-    font-size: 20px;
-    color: white;
-    font-weight: lighter;
-    margin: 18px 0;
 }
 
 /*
@@ -246,91 +239,56 @@ nav ul a:hover::after{
 
 */
 
-/*css projetos.projetos*/
-.projetos {
-    margin: 180px 0 180px 0;
-    padding: 100px;
-    width: 100%;
+.banner .banner-text p{
+    font-size: 20px;
+    color: white;
+    font-weight: lighter;
+    margin: 18px 0;
 }
-.projetos .container {
+
+/*css projetos.projetos*/
+.projetos .container{
     display: flex;
     align-items: center;
     background-color: white;
+    min-height: 100vh;
 }
-.projetos .projeto-img {
+.projetos .projeto-img{
     width: 50%;
 }
-.projetos .projeto-img img {
+.projetos .projeto-img img{
     width: 100%;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    box-shadow: var(--Light-Red);
 }
-.projetos .projeto-img img:hover{
-    transform: scale(1.1);
-}
-.projetos .projeto-text {
+.projetos .projeto-text{
     width: 50%;
     padding-left: 90px;
 }
-.projetos .projeto-text h2 {
+
+.projetos .projeto-text h2{
     font-size: 2.5em;
     color: var(--black);
 }
-.projetos .projeto-text p {
-    margin: 14px 20px 20px 0px;
+.projetos .projeto-text p{
+    margin: 20px;
     color: var(--black);
 }
-.projetos .projeto-text p b {
+.projetos .projeto-text p b{
     color: var(--black);
     font-size: 20px;
 }
+
 .hidden {
-    opacity: 0; /* Começa completamente invisível */
+    opacity: 0;
     filter: blur(15px);
-    transform: translate(0, 20px); /* Ajuste a translação vertical conforme necessário */
-    transition: opacity 1s, filter 1s, transform 1s; /* Adiciona uma transição para opacity, filter e transform */
-  }
-  
-  .show {
-    opacity: 1; /* Torna a imagem completamente visível */
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
     filter: blur(0);
-    transform: translate(0, 0); /* Volta a imagem para a posição original */
-  }
-
-footer{
-    background-color: var(--black);
+    transform: translateX(0);
+    transition: all 2s;
 }
-footer .container{
-    display: flex;
-    color: white;
-}
-footer .container ul{
-    width: 25%;
-    list-style-type: none;
-    align-items: center;
-    text-align: center;
-}
-footer .container h3{
-    font-size: 30px;
-    margin-top: 16px;
-    font-weight: 600;
-}
-footer .container .redes-sociais img{
-    margin-right: 10px;
-    transition: transform 0.3s ease;
-}
-footer .container .redes-sociais img:hover{
-    transform: scale(1.1);
-}
-
-footer .container ul > p{
-    margin-bottom: 30px;
-}
-footer .container li{
-    margin: 10px 0;
-}
-footer .container a{
-    color: white;
-}
-  
-  
