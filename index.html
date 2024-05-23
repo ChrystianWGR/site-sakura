@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    
-    <title>Sakura Code Projects</title>
+   
+    <title>SakuraCode</title>
 </head>
 
 <body>
@@ -31,9 +29,9 @@
                   
                 <ul class="ul">
                     <a href="index.html">Home</a>
-                    <a href="index.html">Sobre</a>
-                    <a href="index.html">Serviços</a>
-                    <a class="btn" href="index.html">Contato</a>
+                    <a href="sobre.html">Sobre</a>
+                    <a href="servico.html">Servicos</a>
+                    <a class="btn" href="index.html">contato</a>
                 </ul> 
             </nav>
     
@@ -65,11 +63,11 @@
                 <img src="img/projeto1.PNG" alt="projeto1">
             </div>
             <div class="projeto-text">
-                <h2>Modelo de site imobiliário</h2>
+                <h2>Modelo de site imobiliario</h2>
                 <p>
-                    Site de modelo para empresas imobiliárias e afins, site totalmente responsivo.
+                    Site de modelo para empresas mobiliarias e afins, site totalmente responsivo.
                 </p>
-                <a href="https://web-responsivo-gilt.vercel.app" class="btn" target="_blank">Conheça a página</a>
+                <a href="https://web-responsivo-gilt.vercel.app" class="btn" target="_blank">connheça a pagina</a>
             </div>
         </div>
         <!--final container-->
@@ -88,12 +86,37 @@
                 <p>
                     Site desenvolvido para a empresa sakura code .
                 </p>
-                <a href="https://web-responsivo-gilt.vercel.app" class="btn" target="_blank">Ver modelo</a>
+                <a href="https://sakura-ecru.vercel.app" class="btn" target="_blank">connheça a pagina</a>
             </div>
         </div>
         <!--final container-->
     </section>
     <!--final proejtos 2-->
+
+    <!--section formulario-->
+    
+    <section id="contact" class="py-20 bg-gradient-to-br from-50% from-gradient-orange-start to-gradient-orange-end to-75% text-white">
+        <div class="container mx-auto">
+            <h2 class="uppercase text-3xl font-bold underline underline-offset-[16px] decoration-8 pr-3 mb-16">Contact</h2>
+            <form action="javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you're trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <input class="p-2 border border-light-grey rounded w-full md:w-2/3 text-charcoal" placeholder="Name" autocomplete="name" required="" type="text" name="name">
+                    </div>
+                    <div>
+                        <input class="p-2 border border-light-grey rounded w-full md:w-2/3 text-charcoal" autocomplete="email" placeholder="your@email.com" required="" type="email" name="email">
+                    </div>
+                </div>
+                <div>
+                    <textarea class="p-2 border border-light-grey rounded text-charcoal w-full md:w-2/3" name="message" id="message" placeholder="Your message..."></textarea>
+                </div>
+                <button class="uppercase border-white border-2 px-4 py-2 rounded-lg flex items-center gap-2 hover:backdrop-brightness-125" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"></path></svg>Send message
+                </button>
+            </form>
+        </div>
+    </section>
+    
 
     <!--inicio do footer-->
     <footer>
@@ -101,7 +124,8 @@
             <ul>
                 <!--ul 1-->
                 <h3>SakuraCode</h3>
-                <P>Desenvolvimento Web de qualidade</P>
+                <P>Somos uma empresa 
+                dedicada de desenvolvimente web.</p>
                 <div class="redes-sociais">
                     <img src="img/facebook.png" alt="facebook">
                     <img src="img/instagram.png" alt="instagram">
@@ -113,27 +137,38 @@
 
             <!--ul 2-->
             <ul>
-                <h3>Links</h3>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li> 
-                <li><a href="#">Serviços</a></li>  
+                <h3>Link</h3>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li> 
+                <li><a href="servico.html">Serviços</a></li>  
             </ul>
             <!--final da ul 2-->
 
             <!--ul 3-->
             <ul>
-                <h3>Fale conosco</h3>
+                <h3>Suporte</h3>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Como funciona</a></li>
+                <li><a href="#">Caracteisticas</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=554191411740&text=Ol%C3%A1,%20SakuraCode!%0D%0A%0D%0AEu%20visitei%20o%20seu%20site%20e%20estou%20interessado%20em%20seus%20produtos." target="_blank">Contato</a></li>
+                <li><a href="#">Comunicando</a></li> 
+            </ul>
+            <!--final da ul 3-->
+
+            <!--ul 4-->
+            <ul>
+                <h3>Nós contate</h3>
                 <li>(55) 41 9945-6788</li>
                 <li>seila@gmail.com</li>
                 <li>Brasil</li>
             </ul>
-            <!--final da ul 3-->
+            <!--final da ul 4-->
         </div>
     </footer>
       <!--final do footer-->
     
     <script src="js/main.js"></script>
     <script src="js/teste.js"></script>
+    <script src="js/teste2.js"></script>
 </body>
 </html>
