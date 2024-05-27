@@ -245,9 +245,44 @@ nav ul a:hover::after{
 }
 */
 
+/*css divisoria*/
+.divisoria{
+    margin: 100px 0 140px 0;
+}
+.divisoria .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    background-color: white;
+}
+
+.divisoria .divisoria-box{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    background-color: #1d1d1b;
+}
+
+.divisoria-box .divisoria .card{
+    width: 10%;
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.divisoria .card h3{
+    font-size: 20px;
+}
+
 /*css projetos.projetos*/
 .projetos {
-    margin: 180px 0 180px 0;
+    margin: 0 0 140px 0;
     width: 100%;
 }
 .projetos .container {
