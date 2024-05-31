@@ -257,10 +257,9 @@ nav ul a:hover::after{
 }
 
 .divisoria .divisoria-box{
-    text-align: center;
     display: flex;
     align-items: center;
-    padding: 100px;
+    padding: 80px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -269,15 +268,26 @@ nav ul a:hover::after{
     background-color: #1d1d1b;
 }
 
-.divisoria-box .divisoria .card{
-    width: 10%;
-    padding: 10px;
-    border-radius: 15px;
-    transition: 0.3s;
+.divisoria-box .card{
+    width: 30%;
+    margin: 10px 90px 10px 90px;
+    padding: 30px 0;
+    border-radius: 20px;
 }
 
-.divisoria .card h3{
+.divisoria-box .card h3{
     font-size: 20px;
+    text-align:center;
+    margin: 20px auto 0px auto;
+}
+
+.divisoria-box .card p{
+    font-size: 20px;
+    text-align:justify;
+}
+
+.divisoria-box .card img{
+    width: 80%;
 }
 
 /*css projetos.projetos*/
@@ -338,7 +348,8 @@ footer .container{
     color: white;
 }
 footer .container ul{
-    width: 25%;
+    width: 100%;
+    padding: 20px;
     list-style-type: none;
     align-items: center;
     text-align: center;
