@@ -270,6 +270,7 @@ nav ul a:hover::after{
 }
 
 .divisoria .divisoria-box {
+.divisoria .divisoria-box{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -447,6 +448,11 @@ footer .footer-section {
     flex: 1;
     min-width: 200px;
     padding: 20px;
+footer .container ul{
+    width: 100%;
+    padding: 20px;
+    list-style-type: none;
+    align-items: center;
     text-align: center;
 }
 
@@ -493,7 +499,7 @@ footer .redes-sociais img:hover {
 @media (max-width: 960px){
 
     /*responsivo nav bar e botões*/
-    .menu-icon{
+    .menu-icon {
         display: block;
     }
 
@@ -604,9 +610,4 @@ footer .redes-sociais img:hover {
     footer .container ul{
         width: 100%;
     }
-
-}
-
-@media (max-width:440px) {
-
 }
