@@ -12,7 +12,7 @@
 
 <body>
 
-    <header>
+    <header id="home">
         <div class="nebula">
             <div class="particles" id="particles"></div>
         </div>        
@@ -28,13 +28,17 @@
                   </div>
                   
                 <ul class="ul">
-                    <a href="index.html">Home</a>
-                    <a href="sobre.html">Sobre</a>
-                    <a href="servico.html">Serviços</a>
-                    <a class="btn" href="index.html">contato</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#projetos">Projetos</a>
+                    <a href="#home">Home</a>
+                    <a class="btn" href="https://api.whatsapp.com/send?phone=554191411740&text=Ol%C3%A1,%20SakuraCode!%0D%0A%0D%0AEu%20visitei%20o%20seu%20site%20e%20estou%20interessado%20em%20seus%20produtos." target="_blank">contato</a>
                 </ul> 
+
+                <div class="menu-icon">
+                    <img src="img/menu.png" alt="icone de menu">
+                </div>
             </nav>
-    
+
             <!-- section do banner -->
             <section class="teste">
                 <div class="banner">
@@ -49,15 +53,23 @@
     </header>
     
     <!-- section divisoria-->
-    <section class="divisoria hidden">
+    <section class="divisoria hidden" id="servicos">
         <div class="container">
             <div class="divisoria-box">
                 <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-pc-display-horizontal" viewBox="0 0 16 16">
+                        <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5M12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0m2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0M1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25"/>
+                    </svg><br>
                     <h3>Front-end</h3>
                     <p>Desenvolvimento front-end de sites estilosos e responsivos</p>
                 </div>
 
                 <div class="card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-server" viewBox="0 0 16 16">
+                        <path d="M1.333 2.667C1.333 1.194 4.318 0 8 0s6.667 1.194 6.667 2.667V4c0 1.473-2.985 2.667-6.667 2.667S1.333 5.473 1.333 4z"/>
+                        <path d="M1.333 6.334v3C1.333 10.805 4.318 12 8 12s6.667-1.194 6.667-2.667V6.334a6.5 6.5 0 0 1-1.458.79C11.81 7.684 9.967 8 8 8s-3.809-.317-5.208-.876a6.5 6.5 0 0 1-1.458-.79z"/>
+                        <path d="M14.667 11.668a6.5 6.5 0 0 1-1.458.789c-1.4.56-3.242.876-5.21.876-1.966 0-3.809-.316-5.208-.876a6.5 6.5 0 0 1-1.458-.79v1.666C1.333 14.806 4.318 16 8 16s6.667-1.194 6.667-2.667z"/>
+                      </svg>
                     <h3>Web Full-Stack</h3>
                     <p>Desenvolvimento de websites completos com banco de dados back-end etc.</p>
                 </div>
@@ -66,7 +78,7 @@
     </section>
     
     <!--section projetos-->
-    <section class="projetos hidden">
+    <section class="projetos hidden" id="projetos">
         <!--container-->
         <div class="container">
             <div class="projeto-img">
@@ -108,69 +120,75 @@
 
     <!--section formulario-->
     
-    <section id="contact">
-        <div class="container mx-auto">
-            <h2 class="uppercase text-3xl font-bold underline underline-offset-[16px] decoration-8 pr-3 mb-16">Contact</h2>
-            <form action="javascript:throw new Error('A React form was unexpectedly submitted. If you called form.submit() manually, consider using form.requestSubmit() instead. If you're trying to use event.stopPropagation() in a submit event handler, consider also calling event.preventDefault().')" class="space-y-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <input class="p-2 border border-light-grey rounded w-full md:w-2/3 text-charcoal" placeholder="Name" autocomplete="name" required="" type="text" name="name">
+    <section class="formulario hidden">
+        <div class="container">
+            <div class="box-formulario">
+                <h2>Formulario para contato</h2>
+                <p>
+                    Nos envie por email sua propostas e ideias para seu web site.
+                </p>
+                <form>
+
+                    <input type="email" placeholder="digite seu email">
+
+                    <div class="input-arquivo">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                        </div>
                     </div>
-                    <div>
-                        <input class="p-2 border border-light-grey rounded w-full md:w-2/3 text-charcoal" autocomplete="email" placeholder="your@email.com" required="" type="email" name="email">
-                    </div>
-                </div>
-                <div>
-                    <textarea class="p-2 border border-light-grey rounded text-charcoal w-full md:w-2/3" name="message" id="message" placeholder="Your message..."></textarea>
-                </div>
-                <button class="uppercase border-white border-2 px-4 py-2 rounded-lg flex items-center gap-2 hover:backdrop-brightness-125" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"></path></svg>Send message
-                </button>
-            </form>
+
+                    <br><button >Enviar</button>
+                </form>
+            </div>
         </div>
     </section>
     
 
     <!--inicio do footer-->
-    <footer>
-        <div class="container">
-
-            <!--ul 2-->
+<footer>
+    <div class="container">
+        <!--ul 1-->
+        <div class="footer-section">
+            <h3>Link</h3>
             <ul>
-                <h3>Link</h3>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li> 
-                <li><a href="servico.html">Serviços</a></li>  
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>  
+                <li><a href="#projetos">Projetos</a></li> 
             </ul>
-            <!--final da ul 2-->
+        </div>
+        <!--final da ul 1-->
 
-            <ul>
-                <!--ul 1-->
-                <h3>SakuraCode</h3>
-                <P>Desenvolvimento Web de qualidade</P>
-                <div class="redes-sociais">
-                    <img src="img/facebook.png" alt="facebook">
-                    <img src="img/instagram.png" alt="instagram">
-                    <img src="img/linkedin.png" alt="linkedin">
-                    <img src="img/twitter.png" alt="twitter">
-                </div>
-            </ul>
-            <!--final da ul 1-->
+        <!--ul 2-->
+        <div class="footer-section">
+            <h3>SakuraCode</h3>
+            <p>Desenvolvimento Web de qualidade</p>
+            <div class="redes-sociais">
+                <img src="img/facebook.png" alt="facebook">
+                <img src="img/instagram.png" alt="instagram">
+                <img src="img/linkedin.png" alt="linkedin">
+                <img src="img/twitter.png" alt="twitter">
+            </div>
+        </div>
+        <!--final da ul 2-->
 
-            <!--ul 4-->
+        <!--ul 3-->
+        <div class="footer-section">
+            <h3>Nós contate</h3>
             <ul>
-                <h3>Nós contate</h3>
                 <li>(55) 41 9945-6788</li>
                 <li>seila@gmail.com</li>
                 <li>Brasil</li>
             </ul>
-            <!--final da ul 4-->
         </div>
-    </footer>
+        <!--final da ul 3-->
+    </div>
+</footer>
+
       <!--final do footer-->
-    
     <script src="js/main.js"></script>
     <script src="js/teste.js"></script>
-    <script src="js/teste2.js"></script>
+    <script src="js/email.js"></script>
+    <script src="js/responsivo.js"></script>
+    <script src="js/rolagem.js"></script>
 </body>
 </html>

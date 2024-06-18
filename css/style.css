@@ -3,11 +3,11 @@
 /*css global*/
 
 *{
-    margin: 0 0 0 0 ;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    outline: none;
+    list-style: none;
     font-family: "Poppins", sans-serif;
 }
 
@@ -132,6 +132,7 @@ p{
 }
 
 /*css do header*/
+
 header{
     background: var(--black);
     filter: brightness(0.8);
@@ -143,6 +144,8 @@ header{
     padding: 0; 
     overflow-x: hidden; 
 }
+
+/* css navbar */
 
 nav{
     display: flex;
@@ -162,6 +165,7 @@ nav ul a{
     text-transform: uppercase;
     font-family: 14px;
     display: block;
+    cursor: pointer;
 }
 
 nav ul a:not(.btn)::after{
@@ -177,6 +181,14 @@ nav ul a:not(.btn)::after{
 nav ul a:hover::after{
     width: 100%;
 }
+
+.menu-icon{
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+/* css banner */
 
 .banner{
     display: flex;
@@ -246,21 +258,24 @@ nav ul a:hover::after{
 */
 
 /*css divisoria*/
-.divisoria{
+.divisoria {
     margin: 100px 0 140px 0;
 }
-.divisoria .container{
+
+.divisoria .container {
     display: flex;
-    justify-content: space-between;
-    margin: 30px auto;
-    background-color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
 }
 
-.divisoria .divisoria-box{
+.divisoria .divisoria-box {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    padding: 80px;
+    padding: 50px;
     width: 100%;
+    max-width: 1200px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -268,27 +283,32 @@ nav ul a:hover::after{
     background-color: #1d1d1b;
 }
 
-.divisoria-box .card{
+.divisoria .card {
+    background-color: white;
     width: 30%;
-    margin: 10px 90px 10px 90px;
-    padding: 30px 0;
-    border-radius: 20px;
+    margin: 0 10px; 
+    padding: 40px; 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s;
+    text-align: center;
 }
 
-.divisoria-box .card h3{
-    font-size: 20px;
-    text-align:center;
-    margin: 20px auto 0px auto;
+.divisoria .card:hover {
+    transform: scale(1.05); 
 }
 
-.divisoria-box .card p{
-    font-size: 20px;
-    text-align:justify;
+.divisoria .card h3 {
+    font-size: 24px; 
+    margin-bottom: 10px;
+    color: #1d1d1b;
 }
 
-.divisoria-box .card img{
-    width: 80%;
+.divisoria .card p {
+    font-size: 16px;
+    color: #555; /
 }
+
 
 /*css projetos.projetos*/
 .projetos {
@@ -340,39 +360,253 @@ nav ul a:hover::after{
     transform: translate(0, 0); /* Volta a imagem para a posição original */
   }
 
-footer{
-    background-color: var(--black);
+
+/* css formulario */
+.formulario{
+    background-color: var(--verde);
+    margin-top: 50px;
 }
-footer .container{
-    display: flex;
+.formulario .box-formulario{
+    text-align: center;
+    padding: 60px;
+    background-image: url('../img/imagem-fundo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    background-color: var(--black);
+    margin: 0px 10px 80px 10px;
+}
+
+.formulario .box-formulario h2{
+    font-size: 2.5rem;
     color: white;
 }
-footer .container ul{
-    width: 100%;
+
+.formulario .box-formulario p{
+    margin: 2px 0px 14px 0px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.formulario .box-formulario input{
+    width: 35%;
+    text-align: justify;
     padding: 20px;
-    list-style-type: none;
-    align-items: center;
+    border-radius: 15px;
+    margin: 0px 0px 8px 0px;
+    border: none;
+    outline: none;
+    color: #00000098;
+    background-color: var(--white);
+}
+
+.formulario .box-formulario .input-arquivo input{
+    width: 35%;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 0px 0px 8px 0px;
+    border: none;
+    outline: none;
+    color: #00000098;
+    background-color: var(--white);
+}
+
+.formulario .box-formulario button{
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    width: 14%;
+    padding: 12px;
+    border-radius: 14px;
+    color:white;
+    background-color: var(--Light-Red);
+}
+
+.formulario .box-formulario button:hover{
+    background-color: var(--Torch-Red);
+}
+
+footer {
+    background-color: var(--black);
+    padding: 40px 0;
+    color: white;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-section {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
     text-align: center;
 }
-footer .container h3{
+
+footer .footer-section h3 {
     font-size: 24px;
-    margin-top: 16px;
+    margin-bottom: 16px;
     font-weight: 600;
 }
-footer .container .redes-sociais img{
+
+footer .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .footer-section ul li {
+    margin: 10px 0;
+}
+
+footer .footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-section a:hover {
+    color: #f39c12; /* Cor de destaque ao passar o mouse */
+}
+
+footer .footer-section p {
+    margin-bottom: 30px;
+}
+
+footer .redes-sociais img {
     margin-right: 10px;
     transition: transform 0.3s ease;
 }
-footer .container .redes-sociais img:hover{
+
+footer .redes-sociais img:hover {
     transform: scale(1.1);
 }
 
-footer .container ul > p{
-    margin-bottom: 30px;
+/* css responsivo */
+
+@media (max-width: 960px){
+
+    /*responsivo nav bar e botões*/
+    .menu-icon{
+        display: block;
+    }
+
+    .logo img {
+        height: 40px; 
+    }
+      
+    .logo a {
+        font-size: 24px;
+    }
+
+    .ul{
+        position: fixed;
+        background: var(--black);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        min-height: 100vh;
+        left: 100%;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ul a{
+        font-size: 20px;
+        margin: 20px 0px;
+    }
+
+    .ul.ativo{
+        left: 0%;
+    }
+
+    .ul.ativo .btn{
+        padding: 15px 25px ;
+        font-size: 16px;
+        border-radius: 14px;
+    }
+
+    header{
+        flex-direction: column;
+        z-index: 1001; 
+    }
+
+    .divisoria .divisoria-box{
+        flex-direction: column;
+    }
+
+    .divisoria-box .card{
+        width: 100%;
+        margin: 10px 0px 30px 0px;
+    }
+
+    .divisoria .divisoria-box h3 {
+        font-size: 20px;
+        margin: 0px 0px;
+    }
+
+    .banner .banner-text h1{
+        font-size: 3.5rem;
+        margin-top: 60px;
+    }
+
+    .projetos .container{
+        flex-direction: column-reverse;
+    }
+
+    .projetos .projeto-text,
+    .projetos .projeto-img{
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .projetos .projeto-text h2{
+        font-size: 34px;
+    }
+
+    /*css newsletter*/
+    .formulario .box-formulario{
+        padding: 50px;
+    }
+    .formulario .box-formulario h2{
+        font-size: 2rem;
+    }
+    .formulario .box-formulario input{
+        width: 100%;
+    }
+
+    .formulario .box-formulario .input-arquivo input{
+        width: 100%;
+    }
+
+    .formulario .box-formulario button{
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    /*css footer*/
+    footer .container ul{
+        margin-top: 30px;
+    }
+    footer .container{
+        flex-direction: column;
+        text-align: center;
+    }   
+    footer .container ul{
+        width: 100%;
+    }
+
 }
-footer .container li{
-    margin: 10px 0;
-}
-footer .container a{
-    color: white;
+
+@media (max-width:440px) {
+
 }
