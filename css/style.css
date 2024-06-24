@@ -2,7 +2,7 @@
 
 /*css global*/
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,7 +13,7 @@
 
 /*cores do projeto*/
 
-:root{
+:root {
     --cor-fundo: #f1f6fc31;
     --black: #1d1d1b;
     --white: #FFFFFF;
@@ -21,7 +21,7 @@
     --Light-Red: #f28693;
 }
 
-body{
+body {
     background-color: var(--cor-fundo);
 }
 
@@ -29,42 +29,43 @@ body{
 
 .logo {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
-  
+
 .logo img {
-    width: auto; 
-    height: 50px; 
-    margin-right: 10px; 
+    width: auto;
+    height: 50px;
+    margin-right: 10px;
 }
-  
+
 .logo a {
-    text-decoration: none; 
+    text-decoration: none;
     font-size: 24px;
-    color: #fff; 
+    color: #fff;
     display: flex;
     text-transform: uppercase;
     font-weight: 800;
     align-items: center;
 }
 
-h3{
+h3 {
     font-size: 50px;
     font-weight: 600;
     color: var(--white);
 }
-p{
+
+p {
     color: var(--white);
 }
 
 /*container reutilizável*/
-.container{
+.container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 5%;
 }
 
-.btn{
+.btn {
     background-color: var(--Light-Red);
     color: white;
     padding: 12px 20px;
@@ -82,6 +83,7 @@ p{
     from {
         outline: 0px solid var(--Light-Red);
     }
+
     to {
         outline: 15px solid #4f9bf900;
     }
@@ -97,7 +99,8 @@ p{
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Evita interferência com outros elementos */
+    pointer-events: none;
+    /* Evita interferência com outros elementos */
     z-index: -1;
 }
 
@@ -123,43 +126,45 @@ p{
     0% {
         transform: translateY(-100%) translateX(0);
     }
+
     50% {
         transform: translateY(800%) translateX(800%);
     }
+
     100% {
-        transform: translateY(1600%) translateX(1400%); 
+        transform: translateY(1600%) translateX(1400%);
     }
 }
 
 /*css do header*/
 
-header{
+header {
     background: var(--black);
     filter: brightness(0.8);
     background-size: cover;
     background-attachment: fixed;
     min-height: 100vh;
-    width: 100%; 
-    margin: 0 0 0 0 ; 
-    padding: 0; 
-    overflow-x: hidden; 
+    width: 100%;
+    margin: 0 0 0 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 /* css navbar */
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
 }
 
-nav ul{
+nav ul {
     display: flex;
     align-items: center;
 }
 
-nav ul a{
+nav ul a {
     color: white;
     margin: 0 25px;
     text-transform: uppercase;
@@ -168,7 +173,7 @@ nav ul a{
     cursor: pointer;
 }
 
-nav ul a:not(.btn)::after{
+nav ul a:not(.btn)::after {
     content: "";
     background-color: var(--Torch-Red);
     height: 3px;
@@ -178,11 +183,11 @@ nav ul a:not(.btn)::after{
     transition: 0.3s;
 }
 
-nav ul a:hover::after{
+nav ul a:hover::after {
     width: 100%;
 }
 
-.menu-icon{
+.menu-icon {
     display: none;
     position: relative;
     z-index: 10;
@@ -190,24 +195,24 @@ nav ul a:hover::after{
 
 /* css banner */
 
-.banner{
+.banner {
     display: flex;
     justify-content: center;
 }
 
-.banner .banner-text{
+.banner .banner-text {
     margin: 100px;
     text-align: center;
     padding: 0 90px;
 }
 
-.banner .banner-text h1{
+.banner .banner-text h1 {
     font-size: 90px;
     font-weight: 800;
     color: var(--white);
 }
 
-.banner .banner-text p{
+.banner .banner-text p {
     font-size: 20px;
     color: white;
     font-weight: lighter;
@@ -286,27 +291,27 @@ nav ul a:hover::after{
 .divisoria .card {
     background-color: white;
     width: 30%;
-    margin: 0 10px; 
-    padding: 40px; 
+    margin: 0 10px;
+    padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     text-align: center;
 }
 
 .divisoria .card:hover {
-    transform: scale(1.05); 
+    transform: scale(1.05);
 }
 
 .divisoria .card h3 {
-    font-size: 24px; 
+    font-size: 24px;
     margin-bottom: 10px;
     color: #1d1d1b;
 }
 
 .divisoria .card p {
     font-size: 16px;
-    color: #555; /
+    color: #555;/
 }
 
 
@@ -315,58 +320,73 @@ nav ul a:hover::after{
     margin: 0 0 140px 0;
     width: 100%;
 }
+
 .projetos .container {
     display: flex;
     align-items: center;
     background-color: white;
 }
+
 .projetos .projeto-img {
     width: 50%;
 }
+
 .projetos .projeto-img img {
     width: 100%;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
-.projetos .projeto-img img:hover{
+
+.projetos .projeto-img img:hover {
     transform: scale(1.1);
 }
+
 .projetos .projeto-text {
     width: 50%;
     padding-left: 90px;
 }
+
 .projetos .projeto-text h2 {
     font-size: 2.5em;
     color: var(--black);
 }
+
 .projetos .projeto-text p {
     margin: 14px 20px 20px 0px;
     color: var(--black);
 }
+
 .projetos .projeto-text p b {
     color: var(--black);
     font-size: 20px;
 }
+
 .hidden {
-    opacity: 0; /* Começa completamente invisível */
+    opacity: 0;
+    /* Começa completamente invisível */
     filter: blur(15px);
-    transform: translate(0, 20px); /* Ajuste a translação vertical conforme necessário */
-    transition: opacity 1s, filter 1s, transform 1s; /* Adiciona uma transição para opacity, filter e transform */
-  }
-  
-  .show {
-    opacity: 1; /* Torna a imagem completamente visível */
+    transform: translate(0, 20px);
+    /* Ajuste a translação vertical conforme necessário */
+    transition: opacity 1s, filter 1s, transform 1s;
+    /* Adiciona uma transição para opacity, filter e transform */
+}
+
+.show {
+    opacity: 1;
+    /* Torna a imagem completamente visível */
     filter: blur(0);
-    transform: translate(0, 0); /* Volta a imagem para a posição original */
-  }
+    transform: translate(0, 0);
+    /* Volta a imagem para a posição original */
+}
 
 
 /* css formulario */
-.formulario{
+.formulario {
     background-color: var(--verde);
     margin-top: 50px;
 }
-.formulario .box-formulario{
+
+.formulario .box-formulario {
     text-align: center;
     padding: 60px;
     background-image: url('../img/imagem-fundo.png');
@@ -378,19 +398,19 @@ nav ul a:hover::after{
     margin: 0px 10px 80px 10px;
 }
 
-.formulario .box-formulario h2{
+.formulario .box-formulario h2 {
     font-size: 2.5rem;
     color: white;
 }
 
-.formulario .box-formulario p{
+.formulario .box-formulario p {
     margin: 2px 0px 14px 0px;
     color: white;
     font-weight: 600;
     font-size: 16px;
 }
 
-.formulario .box-formulario input{
+.formulario .box-formulario input {
     width: 35%;
     text-align: justify;
     padding: 20px;
@@ -402,7 +422,7 @@ nav ul a:hover::after{
     background-color: var(--white);
 }
 
-.formulario .box-formulario .input-arquivo input{
+.formulario .box-formulario .input-arquivo input {
     width: 35%;
     padding: 15px;
     border-radius: 15px;
@@ -413,7 +433,7 @@ nav ul a:hover::after{
     background-color: var(--white);
 }
 
-.formulario .box-formulario button{
+.formulario .box-formulario button {
     margin-top: 14px;
     font-size: 16px;
     font-weight: 600;
@@ -422,11 +442,11 @@ nav ul a:hover::after{
     width: 14%;
     padding: 12px;
     border-radius: 14px;
-    color:white;
+    color: white;
     background-color: var(--Light-Red);
 }
 
-.formulario .box-formulario button:hover{
+.formulario .box-formulario button:hover {
     background-color: var(--Torch-Red);
 }
 
@@ -473,7 +493,8 @@ footer .footer-section a {
 }
 
 footer .footer-section a:hover {
-    color: #f39c12; /* Cor de destaque ao passar o mouse */
+    color: #f39c12;
+    /* Cor de destaque ao passar o mouse */
 }
 
 footer .footer-section p {
@@ -492,22 +513,22 @@ footer .redes-sociais img:hover {
 
 /* css responsivo */
 
-@media (max-width: 960px){
+@media (max-width: 960px) {
 
     /*responsivo nav bar e botões*/
-    .menu-icon{
+    .menu-icon {
         display: block;
     }
 
     .logo img {
-        height: 40px; 
+        height: 40px;
     }
-      
+
     .logo a {
         font-size: 24px;
     }
 
-    .ul{
+    .ul {
         position: fixed;
         background: var(--black);
         top: 0;
@@ -520,31 +541,31 @@ footer .redes-sociais img:hover {
         justify-content: center;
     }
 
-    .ul a{
+    .ul a {
         font-size: 20px;
         margin: 20px 0px;
     }
 
-    .ul.ativo{
+    .ul.ativo {
         left: 0%;
     }
 
-    .ul.ativo .btn{
-        padding: 15px 25px ;
+    .ul.ativo .btn {
+        padding: 15px 25px;
         font-size: 16px;
         border-radius: 14px;
     }
 
-    header{
+    header {
         flex-direction: column;
-        z-index: 1001; 
+        z-index: 1001;
     }
 
-    .divisoria .divisoria-box{
+    .divisoria .divisoria-box {
         flex-direction: column;
     }
 
-    .divisoria-box .card{
+    .divisoria-box .card {
         width: 100%;
         margin: 10px 0px 30px 0px;
     }
@@ -554,61 +575,63 @@ footer .redes-sociais img:hover {
         margin: 0px 0px;
     }
 
-    .banner .banner-text h1{
+    .banner .banner-text h1 {
         font-size: 3.5rem;
         margin-top: 60px;
     }
 
-    .projetos .container{
+    .projetos .container {
         flex-direction: column-reverse;
     }
 
     .projetos .projeto-text,
-    .projetos .projeto-img{
+    .projetos .projeto-img {
         width: 100%;
         text-align: center;
         margin: 10px 0;
         padding: 0;
     }
 
-    .projetos .projeto-text h2{
+    .projetos .projeto-text h2 {
         font-size: 34px;
     }
 
     /*css newsletter*/
-    .formulario .box-formulario{
+    .formulario .box-formulario {
         padding: 50px;
     }
-    .formulario .box-formulario h2{
+
+    .formulario .box-formulario h2 {
         font-size: 2rem;
     }
-    .formulario .box-formulario input{
+
+    .formulario .box-formulario input {
         width: 100%;
     }
 
-    .formulario .box-formulario .input-arquivo input{
+    .formulario .box-formulario .input-arquivo input {
         width: 100%;
     }
 
-    .formulario .box-formulario button{
+    .formulario .box-formulario button {
         width: 50%;
         margin-top: 20px;
     }
 
     /*css footer*/
-    footer .container ul{
+    footer .container ul {
         margin-top: 30px;
     }
-    footer .container{
+
+    footer .container {
         flex-direction: column;
         text-align: center;
-    }   
-    footer .container ul{
+    }
+
+    footer .container ul {
         width: 100%;
     }
 
 }
 
-@media (max-width:440px) {
-
-}
+@media (max-width:440px) {}
